@@ -1,0 +1,149 @@
+@import "vars";
+
+
+body, p, h1, h2, h3, h4, h5, h6, ul, li, a, input, span {  
+	margin: 0;
+	padding: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	
+	color: #464547;
+	color: #39c2d7;
+	color: #fff;
+	color:#333;
+
+}
+
+.container{
+	max-width: 992px;
+	margin: 0 auto;
+	padding: 0 20px;
+
+}
+
+.grid{
+	display: grid;
+}
+
+/* --main header -- */ 
+ .main-header .container {
+	grid-template-columns: 1fr 4fr;
+	padding-top: 25px;
+	margin-bottom: 10px;
+ }
+
+ .logo{
+
+ }
+
+.main-menu ul{
+	padding-top: 10px;
+	padding-left: 15px;
+	li {
+		display: inline-block;
+		margin-right: 17px;
+		a{
+			display: inline-block;
+			text-decoration: none;
+			text-align: center;
+			text-transform: uppercase;
+			font-size: 15px;
+			font-weight: bold;
+			&:hover{
+				color: #39c2d7;
+			}
+		}
+	}
+}
+
+
+/* -- section banner -- */
+
+.banner{
+	background-image: url('../img/banner.jpg');
+	min-height: 60vh;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	align-content: center;
+	.container{
+		grid-template-columns:1fr;
+		align-items: start;
+		height: 60vh;
+	}
+	h1{
+		color: #fff;
+		width: 40%;
+		padding-top: 80px;
+		font-size: 36px;
+		font-weight: normal;
+		padding-right: 475px;
+	}
+}
+
+/* -- section blog -- */
+.section-blog{
+	margin-top: 20px;
+}
+.blog-home{
+	grid-template-columns: repeat(3,1fr);
+	grid-gap: 20px;
+	a {
+		background-color: #cecece;
+		text-decoration: none;
+		grid-template-rows: 170px 1fr;
+		&:hover{
+			background-color: #39c2d7;
+		}
+	}
+}
+
+.blog-item-img{
+	height: 160px;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	margin: 10px;
+}
+
+.blog-item-content{
+	padding: 15px;
+	h2{
+		font-size: 18px;
+	}
+	p{
+		padding-top: 5px;
+	}
+}
+
+/* -- footer -- */
+footer{
+	background-color: #39c2d7;
+	margin-top: 20px;
+	nav{
+		display: inline-block;
+	}
+}
+
+.footer-menu ul{
+	padding: 23px 0;
+	li {
+		display: inline-block;
+		margin-right: 20px;
+		a{
+			display: inline-block;
+			color: #fff;
+			text-align: center;
+			&:hover{
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+.copyright{
+	display: inline-block;
+	p{
+		color: #fff;
+	}
+}
