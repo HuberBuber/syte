@@ -6,10 +6,6 @@ body, p, h1, h2, h3, h4, h5, h6, ul, li, a, input, span {
 	padding: 0;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 14px;
-	
-	color: #464547;
-	color: #39c2d7;
-	color: #fff;
 	color:#333;
 
 }
@@ -100,6 +96,8 @@ body, p, h1, h2, h3, h4, h5, h6, ul, li, a, input, span {
 	background-position: center;
 	background-repeat: no-repeat;
 	margin: 10px;
+	max-width: 93%;
+	justify-self:center;
 }
 
 .blog-item-content{
