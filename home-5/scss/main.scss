@@ -32,10 +32,6 @@ body, p, h1, h2, h3, h4, h5, h6, ul, li, a, input, span {
 	margin-bottom: 10px;
  }
 
- .logo{
-
- }
-
 .main-menu ul{
 	padding-top: 10px;
 	padding-left: 15px;
@@ -147,3 +143,5 @@ footer{
 		color: #fff;
 	}
 }
+
+@import "media";
