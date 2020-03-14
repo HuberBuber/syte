@@ -1,35 +1,36 @@
-var a, b, c , s1, s2;
+var a, b, c, p, typeTriangle, square, fix;
 
-	a = prompt("please input value of a side", "");
-	b = prompt("please input value of b side", "");
-	c = prompt("please input value of c side", "");
- 
-if ((a <= 0) | (b <= 0) | (c <= 0)) {
-	console.log('For data ' + a + ', ' + b + ', ' + c + ':' + ' Incorrect data');
-} else if ((a == b) & (b == c) & (c == a)) {
-	s1 = (a*a*Math.sqrt(3))/4;
-	var f = s1.toFixed(2);
-	console.log('For data ' + a + ', ' + b + ', ' + c + ':');
-	console.log('"Type of triangle is equilateral triangle and square is "'  + f ); // equilateral triangle
-} else if (a == c) {
-	s2 = b*(Math.sqrt(a*a - (b*b/4)))/2;
-	console.log('Type of triangle is isosceles triangle and square is ' + s2.toFixed(2)); // isosceles triangle
-} else if (b == c) {
-	s2 = a*(Math.sqrt(b*b - (a*a/4)))/2;
-	console.log('Type of triangle is isosceles triangle and square is ' + s2.toFixed(2)); // isosceles triangle
-} else if (a == b) {
-	s2 = c*(Math.sqrt(a*a - (c*c/4)))/2;
-	console.log('Type of triangle is isosceles triangle and square is ' + s2.toFixed(2)); // isosceles triangle
-} else if (a*a == b*b + c*c){
-	s2 = b*c/2;
-	console.log('Type of triangle is right triangle and square is ' + s2.toFixed(2)); // right triangle
-} else if (b*b == a*a + c*c){
-	s2 = a*c/2;
-	console.log('Type of triangle is right triangle and square is ' + s2.toFixed(2)); // right triangle
-} else if (c*c == a*a + b*b){
-	s2 = a*b/2;
-	console.log('Type of triangle is right triangle and square is ' + s2.toFixed(2)); // right triangle
-}
+	a = +prompt("Please enter the value of side A", "The value cannot be less than or equal to 0");
+	b = +prompt("Please enter the value of side B", "The value cannot be less than or equal to 0");
+	c = +prompt("Please enter the value of side C", "The value cannot be less than or equal to 0");
+	
+if ( a*a + b*b == c*c || b*b + c*c == a*a || a*a + c*c == b*b){
+	typeTriangle = "right triangle";
+} else if (a == b && b == c && a == c) {
+	typeTriangle = "equilateral triangle";
+} else if (a == b || b == c || a == c) {
+	typeTriangle = "isosceles triangle";
+} else if (a != b && b != c && a != c) {
+	typeTriangle = "scalene triangle";
+} 
+
+	p = (a + b + c)/2;
+	square = Math.sqrt(p*(p - a)*(p - b)*(p - c));
+	fix = +square.toFixed(2);
+
+if (a <= 0 || b <= 0 || c <= 0) {
+		console.log('For data ' + a + ', ' + b + ', ' + c + ':' );
+		console.log('"Incorrect data"');
+	} else if (square == 0) {
+		console.log('For data ' + a + ', ' + b + ', ' + c + ':' );
+		console.log('"Incorrect data : square of triangle cannot be equal to 0"');
+	} else if (isNaN(square)){
+		console.log('For data ' + a + ', ' + b + ', ' + c + ':' );
+		console.log('"Incorrect data : Error, result is NaN"');
+	} else {
+		console.log('For data ' + a + ', ' + b + ', ' + c + ':' );
+		console.log('Type of triangle is ' + typeTriangle + ' and square is: ' + fix);
+	}
 
 
-
+	
